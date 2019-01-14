@@ -61,3 +61,17 @@ function daysInAMonth(month, leapYear){
         return 'Must provide a valid month';
     }
 }
+
+function rps(num){
+    const randomNo = Math.floor(Math.random() * 3) + 1;
+    if (num === randomNo){
+        return "tie";
+    }
+    else if (num === 1 && randomNo === 2 || num === 2 && randomNo === 3 
+            || num === 3 && randomNo === 1) {
+        return "You lose";
+    } 
+    else {
+        return "You Win";
+    }
+}
